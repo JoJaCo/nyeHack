@@ -1,12 +1,15 @@
-fun main(args: Array<String>){
-    var beverage = readLine()?.let {
-        if (it.isNotBlank()){
-            it.capitalize()
-        }else{
-            "Butered Ale"
-        }
-    }
-    //beverage = null
+const val TAVERN_NAME = "Taernl's Folly"
 
-    println(beverage)
+fun main(args: Array<String>){
+    placeOrder()
+
+
+}
+
+
+
+private fun placeOrder(){
+    val indexOfApostrophe = TAVERN_NAME.indexOf('\'')
+    val tavernMaster = TAVERN_NAME.substring(0 until indexOfApostrophe)
+    println("Madrigal speaks with $tavernMaster about their order")
 }
