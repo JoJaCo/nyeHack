@@ -1,15 +1,31 @@
+import kotlin.math.roundToInt
 const val TAVERN_NAME = "Taernl's Folly"
 
 var playerGold = 10
 var playerSilver = 10
 
 fun main(args: Array<String>){
-    placeOrder("Shandy,Dragon’s Breath,5.91")
+    placeOrder("Shandy,Dragon's Breath,5.91")
 
 }
 
-fun performPurchase(){
+fun performPurchase(price: Double){
     displayBalance()
+    val totalPurse = playerGold + (playerSilver /100.0)
+    println("Total purse: $totalPurse")
+    println("Purchasing item for $price")
+    println()
+
+    val remainingBalance = totalPurse - price
+    println("Remaining balance: ${"%.2f".format(remainingBalance)}")
+
+    println()
+    val remainingGold = remainingBalance.toInt()
+    val remainingSilver = (remainingBalance % 1 * 100).roundToInt()
+    playerGold = remainingGold
+    playerSilver = remainingSilver
+    displayBalance()
+
 }
 
 fun displayBalance() {
@@ -28,7 +44,7 @@ private fun placeOrder(menueData: String){
     val message = "Madrigal buys a $name ($type) for $price."
     println(message)
 
-    performPurchase()
+    performPurchase(price.toDouble())
 
     val phrase = if (name == "Dragon's Breath"){
         "Madrigal exclaims ${toDragonSpeak("Ah, delicious $name!")}"
@@ -43,10 +59,10 @@ private fun toDragonSpeak(phrase: String) =
     phrase.replace(Regex("[aeiou]")){
         when (it.value){
             "a" -> "4"
-            "e" -> "4"
-            "i" -> "4"
-            "o" -> "4"
-            "u" -> "4"
+            "e" -> "3"
+            "i" -> "1"
+            "o" -> "0"
+            "u" -> "|_|"
             else -> it.value
         }
     }
