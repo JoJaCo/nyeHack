@@ -1,11 +1,20 @@
 const val TAVERN_NAME = "Taernl's Folly"
 
+var playerGold = 10
+var playerSilver = 10
+
 fun main(args: Array<String>){
     placeOrder("Shandy,Dragon’s Breath,5.91")
 
-
 }
 
+fun performPurchase(){
+    displayBalance()
+}
+
+fun displayBalance() {
+    println("Player's purse balance: Gold: $playerGold , silver: $playerSilver")
+}
 
 
 private fun placeOrder(menueData: String){
@@ -17,11 +26,16 @@ private fun placeOrder(menueData: String){
 
     val (type, name, price) = menueData.split(',')
     val message = "Madrigal buys a $name ($type) for $price."
-
     println(message)
 
-    val phrase = "Ah, delicious $name!"
-    println("Madrigal exclaims: ${toDragonSpeak(phrase)}")
+    performPurchase()
+
+    val phrase = if (name == "Dragon's Breath"){
+        "Madrigal exclaims ${toDragonSpeak("Ah, delicious $name!")}"
+    }else{
+        "Madrigal says: Thanks for the $name."
+    }
+    println(phrase)
 
     }
 
