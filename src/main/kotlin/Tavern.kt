@@ -11,15 +11,13 @@ fun main(args: Array<String>){
     }else{
         println("The tavern master says: Eli isn't here.")
     }
-
-    println(patronList)
-    patronList.remove("Eli")
-    patronList.add("Alex")
-    println(patronList)
-
     println()
 
     placeOrder("Shandy,Dragon's Breath,5.91")
+
+    for (patron in patronList){
+        println("Good Evening, $patron")
+    }
 
 }
 
