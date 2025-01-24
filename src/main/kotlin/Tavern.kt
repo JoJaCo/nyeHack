@@ -6,8 +6,15 @@ var playerSilver = 10
 val patronList: List<String> = listOf("Eli","Mordoc","Sophie")
 
 fun main(args: Array<String>){
+    if (patronList.contains("Eli")){
+        println("The tavern master says: Eli's in the back playing cards")
+    }else{
+        println("The tavern master says: Eli isn't here.")
+    }
+
+    println()
+
     placeOrder("Shandy,Dragon's Breath,5.91")
-    println(patronList)
 
 }
 
@@ -45,7 +52,7 @@ private fun placeOrder(menueData: String){
     val (type, name, price) = menueData.split(',')
     val message = "Madrigal buys a $name ($type) for $price."
     println(message)
-
+    println()
     performPurchase(price.toDouble())
 
     val phrase = if (name == "Dragon's Breath"){
