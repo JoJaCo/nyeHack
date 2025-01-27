@@ -3,3 +3,4 @@ Elixir,Shirley’s Temple,4.12
 Meal,goblet of LaCroix,1.22
 Desert dessert, pickled camel hump,7.33
 Elixir,iced boilermaker,11.22
+Desert, Chocolet cake, 8.99
