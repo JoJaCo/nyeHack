@@ -5,24 +5,16 @@ const val TAVERN_NAME = "Taernl's Folly"
 var playerGold = 10
 var playerSilver = 10
 val patronList = mutableListOf("Eli","Mordoc","Sophie")
+val lastName = listOf("Ironfoot","Fernsworth","Beggins")
 val menuList = File("data/tavern-menu-items.txt").readText().split("\n")
 
 fun main(args: Array<String>){
 
-    if (patronList.contains("Eli")){
-        println("The tavern master says: Eli's in the back playing cards")
-    }else{
-        println("The tavern master says: Eli isn't here.")
-    }
-    println()
-
-    patronList.forEachIndexed { index, patron ->
-        println("Good evening, $patron - you're #${index + 1} in line")
-        placeOrder(patron,"Shandy,Dragon's Breath,5.91")
-    }
-
-    menuList.forEachIndexed{index, data ->
-        println("$index: $data")
+    (0..9).forEach{
+        val first = patronList.shuffled().first()
+        val last = lastName.shuffled().first()
+        val name = " $first $last"
+        println(name)
     }
 
 
