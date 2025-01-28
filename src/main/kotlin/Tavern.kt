@@ -30,35 +30,15 @@ fun main(args: Array<String>){
 
     }
 
-
-    println(patronGold)
-
 }
 
-fun performPurchase(price: Double){
-    displayBalance()
-    val totalPurse = playerGold + (playerSilver /100.0)
-    println("Total purse: $totalPurse")
-    println("Purchasing item for $price")
-    println()
 
-    val remainingBalance = totalPurse - price
-    println("Remaining balance: ${"%.2f".format(remainingBalance)}")
-
-    println()
-    val remainingGold = remainingBalance.toInt()
-    val remainingSilver = (remainingBalance % 1 * 100).roundToInt()
-    playerGold = remainingGold
-    playerSilver = remainingSilver
-    displayBalance()
-
-}
 
 fun displayBalance() {
     println("Player's purse balance: Gold: $playerGold , silver: $playerSilver")
 }
 
-
+//placing our order for our people
 private fun placeOrder(patronName: String, menueData: String){
 
     val indexOfApostrophe = TAVERN_NAME.indexOf('\'')
@@ -89,6 +69,25 @@ private fun placeOrder(patronName: String, menueData: String){
     println()
 
     }
+// updating the wallet to players
+fun performPurchase(price: Double){
+    displayBalance()
+    val totalPurse = playerGold + (playerSilver /100.0)
+    println("Total purse: $totalPurse")
+    println("Purchasing item for $price")
+    println()
+
+    val remainingBalance = totalPurse - price
+    println("Remaining balance: ${"%.2f".format(remainingBalance)}")
+
+    println()
+    val remainingGold = remainingBalance.toInt()
+    val remainingSilver = (remainingBalance % 1 * 100).roundToInt()
+    playerGold = remainingGold
+    playerSilver = remainingSilver
+    displayBalance()
+
+}
 
 private fun toDragonSpeak(phrase: String) =
     phrase.replace(Regex("[aeiou]")){
