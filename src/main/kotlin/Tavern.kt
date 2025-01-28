@@ -2,8 +2,6 @@ import java.io.File
 import kotlin.math.roundToInt
 const val TAVERN_NAME = "Taernl's Folly"
 
-var playerGold = 10
-var playerSilver = 10
 val patronList = mutableListOf("Eli","Mordoc","Sophie")
 val lastName = listOf("Ironfoot","Fernsworth","Beggins")
 val uniquePatrons = mutableSetOf<String>()
@@ -25,7 +23,8 @@ fun main(args: Array<String>){
 
     var orderCount = 0
     while (orderCount <=9){
-        placeOrder(uniquePatrons.shuffled().first(), menuList.shuffled().first())
+        placeOrder(uniquePatrons.shuffled().first(),
+            menuList.shuffled().first())
         orderCount++
 
     }
@@ -33,10 +32,11 @@ fun main(args: Array<String>){
 }
 
 
-
-fun displayBalance() {
-    println("Player's purse balance: Gold: $playerGold , silver: $playerSilver")
+fun performPurchease(price: Double, patronName: String) {
+    val totalPurse = patronGold.getValue(patronName)
+    patronGold[patronName] = totalPurse - price
 }
+
 
 //placing our order for our people
 private fun placeOrder(patronName: String, menueData: String){
@@ -55,7 +55,7 @@ private fun placeOrder(patronName: String, menueData: String){
 
 
 
-    //performPurchase(price.toDouble())
+    performPurchease(price.toDouble(),patronName)
 
     val phrase = if (name == "Dragon's Breath"){
         //"Madrigal exclaims ${toDragonSpeak("Ah, delicious $name!")}"
@@ -68,26 +68,14 @@ private fun placeOrder(patronName: String, menueData: String){
     println(phrase)
     println()
 
-    }
-// updating the wallet to players
-fun performPurchase(price: Double){
-    displayBalance()
-    val totalPurse = playerGold + (playerSilver /100.0)
-    println("Total purse: $totalPurse")
-    println("Purchasing item for $price")
-    println()
 
-    val remainingBalance = totalPurse - price
-    println("Remaining balance: ${"%.2f".format(remainingBalance)}")
 
-    println()
-    val remainingGold = remainingBalance.toInt()
-    val remainingSilver = (remainingBalance % 1 * 100).roundToInt()
-    playerGold = remainingGold
-    playerSilver = remainingSilver
-    displayBalance()
+
 
 }
+// updating the wallet to players
+
+
 
 private fun toDragonSpeak(phrase: String) =
     phrase.replace(Regex("[aeiou]")){
