@@ -1,16 +1,23 @@
 fun main(args: Array<String>) {
 
 
-    val player = player()
+    val player = player("Madrigal", 89,true,false)
     player.name = "estragon"
     print(player.name + "TheBrave")
+
+    //Fireball is cast
     player.castFireball()
+
+    //Aura
+    val auraColor = player.auraColor()
+
+    println()
+    //Player status
+    printPlayerStatus(player)
 
     //Aura
     player.auraColor()
 
-    println()
-    printPlayerStatus(player)
 
 
     //PlayerStatus
