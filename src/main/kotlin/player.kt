@@ -1,5 +1,8 @@
-class player {
-    var name = "Madrigal"
+class player(_name: String,
+             _healthPoints: Int,
+             _isBlessed: Boolean,
+             _isImmortal: Boolean) {
+    var name = _name
         get() = field.capitalize()
         set(value){
             field = value.trim()
