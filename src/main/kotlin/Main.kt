@@ -1,9 +1,9 @@
 fun main(args: Array<String>) {
 
 
-    val player = player("Madrigal", 89,true,false)
-    player.name = "estragon"
-    print(player.name + "TheBrave")
+    val player = player("Kar")
+    player.name = "Estragon"
+    print(player.name + "- TheBrave ")
 
     //Fireball is cast
     player.castFireball()

@@ -1,5 +1,5 @@
 class player(_name: String,
-             var healthPoints: Int,
+             var healthPoints: Int = 100, //here
              val isBlessed: Boolean,
              private val isImmortal: Boolean) {
     var name = _name
@@ -8,6 +8,17 @@ class player(_name: String,
             field = value.trim()
         }
 
+
+    //Secondary constructor
+    constructor(name: String): this(name,
+        healthPoints = 100,
+        isBlessed = true,
+        isImmortal = false){
+        if (name.toLowerCase() == "kar"){
+            healthPoints = 40 //here
+        }
+        println("the secondary construcort was called ")
+    }
 
     fun auraColor():String{
         val auraVisible = isBlessed && healthPoints > 50 || isImmortal
