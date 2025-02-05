@@ -8,6 +8,12 @@ class player(_name: String,
             field = value.trim()
         }
 
+    init{
+        require(healthPoints > 0, {"healthPoints must be greater than zero."})
+        require(name.isNotBlank(), {"Player must have a name."})
+
+    }
+
 
     //Secondary constructor
     constructor(name: String): this(name,
