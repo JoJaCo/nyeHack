@@ -1,3 +1,5 @@
+import java.io.File
+
 class player(_name: String,
              var healthPoints: Int = 100, //here
              val isBlessed: Boolean,
@@ -7,6 +9,22 @@ class player(_name: String,
         set(value){
             field = value.trim()
         }
+
+
+    fun castFireball(numFireballs: Int = 2) =
+        println("A glass of Fireball springs into existence (x$numFireballs)")
+
+    //getting the name of the heros home town
+    val hometown: String = selectHometown()
+
+    //getting data from the file
+    private fun selectHometown() = File("data/towns.txt")
+        .readText()
+        .split("\n")
+        .shuffled()
+        .first()
+
+
 
     init{
         require(healthPoints > 0, {"healthPoints must be greater than zero."})
@@ -49,8 +67,6 @@ class player(_name: String,
 
 
 
-    fun castFireball(numFireballs: Int = 2) =
-        println("A glass of Fireball springs into existence (x$numFireballs)")
 
 
 
