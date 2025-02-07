@@ -1,15 +1,20 @@
 fun main(args: Array<String>) {
 
 
-    val player = player("Kar")
+    val player = player("Madrigal")
     player.name = "Estragon"
     print(player.name + "- TheBrave ")
 
     //Fireball is cast
     player.castFireball()
+    println()
 
-    //Aura
-    val auraColor = player.auraColor()
+    var currentRoom: Room =  TownSquare()
+
+    println(currentRoom.description())
+    println(currentRoom.load())
+
+
 
     println()
     //Player status

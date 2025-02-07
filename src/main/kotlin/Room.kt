@@ -6,7 +6,10 @@ open class Room(val name: String) {
     open fun load() = "Nothing much to see here....."
 }
 
-class TownSquare : Room("Town Square"){
-    override fun load() = "The villagers rally and cheer as you enter!"
+open class TownSquare : Room("Town Square"){
+    override val dengerLevel = super.dengerLevel - 3
+    private var bellSound = "GWONG"
+    final override fun load() = "The villagers rally and cheer as you enter!\n${ringBell()}"
 
+    private fun ringBell() = "The bell tower announces your arrival. $bellSound"
 }
