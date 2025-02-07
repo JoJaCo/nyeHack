@@ -5,7 +5,7 @@ class player(_name: String,
              val isBlessed: Boolean,
              private val isImmortal: Boolean) {
     var name = _name
-        get() = field.capitalize()
+        get() = "${field.capitalize()} of $hometown"
         set(value){
             field = value.trim()
         }
@@ -15,7 +15,7 @@ class player(_name: String,
         println("A glass of Fireball springs into existence (x$numFireballs)")
 
     //getting the name of the heros home town
-    val hometown: String = selectHometown()
+    val hometown by lazy {selectHometown()}  //Lazy initialization
 
     //getting data from the file
     private fun selectHometown() = File("data/towns.txt")
@@ -27,8 +27,8 @@ class player(_name: String,
 
 
     init{
-        require(healthPoints > 0, {"healthPoints must be greater than zero."})
-        require(name.isNotBlank(), {"Player must have a name."})
+        require(healthPoints > 0) { "healthPoints must be greater than zero." }
+        require(name.isNotBlank()) { "Player must have a name." }
 
     }
 
