@@ -5,11 +5,12 @@ enum class Direction(private val coordinate: Coordinate){
     WEST(Coordinate(-1,0));
 
     fun updateCoordinate(playerCoordinate: Coordinate) =
-        Coordinate(playerCoordinate.x + coordinate.x,
-            playerCoordinate.y + coordinate.y)
+        coordinate + playerCoordinate
 
 }
 
 data class Coordinate(val x: Int, val y: Int){
     val isInbounds = x >= 0 && y>=0
+
+    operator fun plus(other: Coordinate) = Coordinate(x + other.x, y + other.y)
 }

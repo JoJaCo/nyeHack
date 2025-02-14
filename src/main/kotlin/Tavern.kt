@@ -32,10 +32,7 @@ fun main(args: Array<String>){
 }
 
 
-fun performPurchease(price: Double, patronName: String) {
-    val totalPurse = patronGold.getValue(patronName)
-    patronGold[patronName] = totalPurse - price
-}
+
 
 
 //placing our order for our people
@@ -74,7 +71,10 @@ private fun placeOrder(patronName: String, menueData: String){
 
 }
 // updating the wallet to players
-
+fun performPurchease(price: Double, patronName: String) {
+    val totalPurse = patronGold.getValue(patronName)
+    patronGold[patronName] = totalPurse - price
+}
 
 
 private fun toDragonSpeak(phrase: String) =
