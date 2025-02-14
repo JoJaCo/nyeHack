@@ -21,7 +21,9 @@ object Game{
     }
 
     fun play(){
-        while (true){
+        var playGame: Boolean = true
+
+        while (playGame){
             //play NyetHack
 
             println(currentRoom.description())
@@ -31,7 +33,11 @@ object Game{
             printPlayerStatus(player)
 
             print("> Enter your command:  ")
-            println(GameInput(readLine()).processCommand())
+            if (readLine() == "quite"){
+                playGame = false
+            }else {
+                println(GameInput(readLine()).processCommand())
+            }
         }
     }
     //our nested GameInput class
@@ -42,6 +48,7 @@ object Game{
 
         fun processCommand() = when (command.toLowerCase()){
             "move" -> move(argument)
+            "quit","exit" -> false
             else -> commandNotFound()
         }
 
