@@ -1,3 +1,9 @@
+package com.bignerdranch.nyethack
+
+import Direction
+import Room
+import TownSquare
+
 fun main(args: Array<String>) {
 
     Game.play()
@@ -6,7 +12,7 @@ fun main(args: Array<String>) {
 
 object Game{
     private val player = player("Madrigal")
-    private var currentRoom: Room =  TownSquare()
+    private var currentRoom: Room = TownSquare()
 
     private var worldMap = listOf(
         listOf(currentRoom, Room("Tavern"), Room("Back Room")),
@@ -75,7 +81,7 @@ object Game{
         }
     }
 
-    private fun printPlayerStatus(player:player){
+    private fun printPlayerStatus(player: player){
         println("(Aura: ${player.auraColor()})" +
                 "(Blessed: ${if (player.isBlessed) "YES" else "NO"})")
         println("${player.name} ${player.formatHealthStatus()}")

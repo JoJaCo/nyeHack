@@ -1,3 +1,6 @@
+package com.bignerdranch.nyethack
+
+import Coordinate
 import java.io.File
 
 class player(_name: String,
@@ -16,7 +19,7 @@ class player(_name: String,
 
     //getting the name of the heros home town
     val hometown by lazy {selectHometown()}  //Lazy initialization
-    var currentPosition = Coordinate(0,0)
+    var currentPosition = Coordinate(0, 0)
 
     //getting data from the file
     private fun selectHometown() = File("data/towns.txt")
