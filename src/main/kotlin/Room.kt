@@ -1,7 +1,12 @@
+import com.bignerdranch.nyethack.Goblin
+import com.bignerdranch.nyethack.Monster
+
 open class Room(val name: String) {
     protected open val dengerLevel = 5
+    var monster: Monster? = Goblin() //monster has been created
     fun description() = "Room: $name \n " +
-            "Danger level: ${dengerLevel}"
+            "Danger level: ${dengerLevel}"+
+            "Creature: ${monster?.description ?: "none"}"
 
     open fun load() = "Nothing much to see here....."
 }

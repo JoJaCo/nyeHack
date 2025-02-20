@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
 }
 
 object Game{
-    private val player = player("Madrigal")
+    private val player = Player("Madrigal")
     private var currentRoom: Room = TownSquare()
 
     private var worldMap = listOf(
@@ -81,8 +81,17 @@ object Game{
             "Invalid direction: $directionInput."
         }
     }
+    //defining the fight function
+    private fun fight() = currentRoom.monster?.let {
+        while (player.healthPoints > 0 && it.healthPoints > 0){
+            Thread.sleep(1000)
+        }
+        "Combat complete"
 
-    private fun printPlayerStatus(player: player){
+    }?: "There's nothing here to fight."
+
+
+    private fun printPlayerStatus(player: Player){
         println("(Aura: ${player.auraColor()})" +
                 "(Blessed: ${if (player.isBlessed) "YES" else "NO"})")
         println("${player.name} ${player.formatHealthStatus()}")
