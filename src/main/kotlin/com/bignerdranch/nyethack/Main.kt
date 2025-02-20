@@ -43,6 +43,7 @@ object Game{
                 playGame = false
             }else {
                 println(GameInput(readLine()).processCommand())
+
             }
         }
     }

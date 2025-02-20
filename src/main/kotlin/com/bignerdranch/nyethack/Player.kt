@@ -3,10 +3,10 @@ package com.bignerdranch.nyethack
 import Coordinate
 import java.io.File
 
-class player(_name: String,
-             var healthPoints: Int = 100, //here
+class Player(_name: String,
+             override var healthPoints: Int = 100, //here
              val isBlessed: Boolean,
-             private val isImmortal: Boolean) {
+             private val isImmortal: Boolean): Fightable {
     var name = _name
         get() = "${field.capitalize()} of $hometown"
         set(value){
@@ -67,10 +67,19 @@ class player(_name: String,
             else -> "is in awful condition!"
         }
 
+    override val diceCount = 3
+    override val damageRoll = 6
 
+    override fun attack(opponent: Fightable): Int {
+        val damageDealt = if (isBlessed){
+            damageRoll * 2
+        }else {
+            damageRoll
+        }
+        opponent.healthPoints -= damageDealt
+        return damageDealt
 
-
-
+    }
 
 
 }
