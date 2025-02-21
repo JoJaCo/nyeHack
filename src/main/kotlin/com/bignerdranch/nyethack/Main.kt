@@ -10,7 +10,7 @@ fun main(args: Array<String>) {
     Game.play()
 
 }
-
+//start of the game
 object Game{
     private val player = Player("Madrigal")
     private var currentRoom: Room = TownSquare()
@@ -20,7 +20,7 @@ object Game{
         listOf(Room("Long Corridor"), Room("Generic Room"))
     )
 
-
+//whats get init first
     init{
         println("Welcome, adventurer.")
         player.castFireball()
@@ -123,6 +123,8 @@ object Game{
                 "(Blessed: ${if (player.isBlessed) "YES" else "NO"})")
         println("${player.name} ${player.formatHealthStatus()}")
     }
+
+
 }
 
 
