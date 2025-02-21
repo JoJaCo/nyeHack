@@ -68,7 +68,9 @@ class Player(_name: String,
         }
 
     override val diceCount = 3
-    override val damageRoll = 6
+
+    override val diceSides: Int = 6
+
 
     override fun attack(opponent: Fightable): Int {
         val damageDealt = if (isBlessed){
