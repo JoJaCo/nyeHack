@@ -7,16 +7,19 @@ class LootBox<T>(item: T){
     }
 
     fun <R> fetch(lootModFunction: (T) -> R): R?{
+        println("fetch number 2")
         return lootModFunction(loot).takeIf{open}
     }
 
 }
 
-class Fedora(val name: String, val value: Int)
-class Coin(val value: Int)
+open class Loot(val value: Int)
+
+class Fedora(val name: String, value: Int) : Loot(value)
+class Coin(value: Int): Loot(value)
 
 fun main(args: Array<String>){
-    val lootBoxOne: LootBox<Fedora> = LootBox(Fedora("A generic - looking fedora", 15))
+    val lootBoxOne: LootBox<Fedora> = LootBox(Fedora("A generic - looking fedora", 20))
     val lootBoxTwo: LootBox <Coin> = LootBox(Coin(15))
 
 
@@ -26,7 +29,7 @@ fun main(args: Array<String>){
     }
 
     val coin = lootBoxOne.fetch(){
-        Coin(it. value *3)
+        Coin(it.value * 3)
     }
 
     coin?.let { println(it.value) }

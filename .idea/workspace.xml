@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ae0005e-3cd5-4fa9-8d82-39fe3719a2c1" name="Changes" comment="Started on Generics">
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinScripting.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Generics.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/nyeHack.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/nyeHack.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bignerdranch/nyethack/Game$GameInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bignerdranch/nyethack/Game$GameInput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Generics.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Generics.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,13 +117,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1736280682919</updated>
-    </task>
-    <task id="LOCAL-00008" summary="imported a constant and aa function call placeOrder() code break down is in my notion notes.">
-      <created>1737119075635</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1737119075635</updated>
     </task>
     <task id="LOCAL-00009" summary="an argument is passed in placeOrder(), data is being recived and split into its respected location.">
       <created>1737120971967</created>
@@ -465,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1740177014364</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Started on Generics">
+      <created>1740557635205</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1740557635206</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
