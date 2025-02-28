@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ae0005e-3cd5-4fa9-8d82-39fe3719a2c1" name="Changes" comment="Started on Generics">
+    <list default="true" id="0ae0005e-3cd5-4fa9-8d82-39fe3719a2c1" name="Changes" comment="Updating our Github">
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Generics.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Generics.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +27,9 @@
         <option name="title" value="All" />
       </GitPushTagMode>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/kotlin/Generics.kt" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -117,13 +120,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1736280682919</updated>
-    </task>
-    <task id="LOCAL-00009" summary="an argument is passed in placeOrder(), data is being recived and split into its respected location.">
-      <created>1737120971967</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1737120971967</updated>
     </task>
     <task id="LOCAL-00010" summary="Updated the menueData.split() on line 16">
       <created>1737121077550</created>
@@ -461,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1740557635206</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Updating our Github">
+      <created>1740714323466</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1740714323466</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -476,7 +479,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="We added constructors to our class" />
     <MESSAGE value="Created a secondary constructor and initalized variables to healthpoints depending on the call" />
     <MESSAGE value="We started on initialization" />
     <MESSAGE value="added 10 towns and implemented into the player.kt class" />
@@ -501,6 +503,7 @@
     <MESSAGE value="finished chapter 16" />
     <MESSAGE value="pushing the last of my code" />
     <MESSAGE value="Started on Generics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started on Generics" />
+    <MESSAGE value="Updating our Github" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating our Github" />
   </component>
 </project>
