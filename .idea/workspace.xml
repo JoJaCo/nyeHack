@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ae0005e-3cd5-4fa9-8d82-39fe3719a2c1" name="Changes" comment="Updating our Github">
+    <list default="true" id="0ae0005e-3cd5-4fa9-8d82-39fe3719a2c1" name="Changes" comment="Indexing to the loot array">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Generics.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Generics.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Coin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Coin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Fedora.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Fedora.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GenericsKt$main$coin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GenericsKt$main$coin$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GenericsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GenericsKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LootBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LootBox.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,13 +126,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1736280682919</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Updated the menueData.split() on line 16">
-      <created>1737121077550</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1737121077551</updated>
     </task>
     <task id="LOCAL-00011" summary="Created a new function on line 28 also added new code to line 23">
       <created>1737190954978</created>
@@ -464,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1740714323466</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Indexing to the loot array">
+      <created>1740736149027</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1740736149029</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -479,7 +485,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created a secondary constructor and initalized variables to healthpoints depending on the call" />
     <MESSAGE value="We started on initialization" />
     <MESSAGE value="added 10 towns and implemented into the player.kt class" />
     <MESSAGE value="corrected lines 30 and 31 in player.kt" />
@@ -504,6 +509,7 @@
     <MESSAGE value="pushing the last of my code" />
     <MESSAGE value="Started on Generics" />
     <MESSAGE value="Updating our Github" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating our Github" />
+    <MESSAGE value="Indexing to the loot array" />
+    <option name="LAST_COMMIT_MESSAGE" value="Indexing to the loot array" />
   </component>
 </project>
