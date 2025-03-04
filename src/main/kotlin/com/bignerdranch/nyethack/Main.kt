@@ -5,6 +5,7 @@ import Room
 import TownSquare
 import kotlin.system.exitProcess
 
+var keepPlaying = true
 fun main(args: Array<String>) {
 
     Game.play()
@@ -27,10 +28,8 @@ object Game{
 
     }
 
+
     fun play(){
-
-        var keepPlaying = true
-
         while (keepPlaying){
             //play NyetHack
 
@@ -40,16 +39,8 @@ object Game{
             //Player status
             printPlayerStatus(player)
 
-            print("> Enter your command:  ")
-            if (GameInput(readLine()).processCommand() == "false"){
-                println("you stopped playing the game ")
-                keepPlaying = false
-            }else{
-                println("input another command")
-                println(GameInput(readLine()).processCommand())
-
-            }
-            //println(GameInput(readLine()).processCommand())
+            print("> Enter your command (**Entering quit or exit will stop the game**):  ")
+            println(GameInput(readLine()).processCommand())
 
 
 
@@ -70,7 +61,7 @@ object Game{
         fun processCommand() = when (command.toLowerCase()){
             "fight" -> fight()
             "move" -> move(argument)
-            "quit","exit" -> "false"
+            "quit","exit" -> {  keepPlaying = false; "Quitting..."}
             else -> commandNotFound()
         }
 
