@@ -20,7 +20,7 @@ object Game{
         listOf(Room("Long Corridor"), Room("Generic Room"))
     )
 
-//whats get init first
+//what gets init first
     init{
         println("Welcome, adventurer.")
         player.castFireball()
@@ -29,8 +29,9 @@ object Game{
 
     fun play(){
 
+        var keepPlaying = true
 
-        while (true){
+        while (keepPlaying){
             //play NyetHack
 
             println(currentRoom.description())
@@ -40,7 +41,16 @@ object Game{
             printPlayerStatus(player)
 
             print("> Enter your command:  ")
-            println(GameInput(readLine()).processCommand())
+            if (GameInput(readLine()).processCommand() == "false"){
+                println("you stopped playing the game ")
+                keepPlaying = false
+            }else{
+                println("input another command")
+                println(GameInput(readLine()).processCommand())
+
+            }
+            //println(GameInput(readLine()).processCommand())
+
 
 
         }
@@ -60,7 +70,7 @@ object Game{
         fun processCommand() = when (command.toLowerCase()){
             "fight" -> fight()
             "move" -> move(argument)
-            "quit","exit" -> false
+            "quit","exit" -> "false"
             else -> commandNotFound()
         }
 
@@ -76,12 +86,12 @@ object Game{
 
             if (!newPosition.isInbounds){
                 throw IllegalStateException(" $direction is out of bounds ")
+            }else {
+                val newRoom = worldMap[newPosition.y][newPosition.x]
+                player.currentPosition = newPosition
+                currentRoom = newRoom
+                "Ok, you move $direction to the ${newRoom.name} \n${newRoom.load()}"
             }
-            val newRoom = worldMap[newPosition.y][newPosition.x]
-            player.currentPosition = newPosition
-            currentRoom = newRoom
-            "Ok, you move $direction to the ${newRoom.name} \n${newRoom.load()}"
-
         }catch(e: Exception){
             "Invalid direction: $directionInput."
         }
