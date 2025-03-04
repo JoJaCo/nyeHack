@@ -17,7 +17,7 @@ class Player(_name: String,
     fun castFireball(numFireballs: Int = 2) =
         println("A glass of Fireball springs into existence (x$numFireballs)")
 
-    //getting the name of the heros home town
+    //getting the name of the heros hometown
     val hometown by lazy {selectHometown()}  //Lazy initialization
     var currentPosition = Coordinate(0, 0)
 
